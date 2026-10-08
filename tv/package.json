@@ -1,0 +1,37 @@
+{
+  "name": "picknight-tv",
+  "version": "0.1.0",
+  "private": true,
+  "//": "Dependency versions mirror Amazon's official Vega sample app (AmazonAppDev/vega-video-sample). To be installed on a macOS/Ubuntu machine with the Vega SDK; see README.md.",
+  "scripts": {
+    "start": "react-native start",
+    "start:simulator": "kepler device simulator start",
+    "app:install:debug": "kepler device install-app -b Debug --dir .",
+    "app:launch": "kepler device launch-app",
+    "app:build:debug": "react-native build-kepler --build-type Debug",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@amazon-devices/kepler-ui-components": "~3.2.0",
+    "@amazon-devices/react-native-kepler": "~4.0.0+rn0.83.0",
+    "react": "19.2.0",
+    "react-native": "0.83.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@react-native/babel-preset": "0.83.0",
+    "@react-native/metro-config": "0.83.0",
+    "@react-native/typescript-config": "0.83.0",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "kepler": {
+    "projectType": "application",
+    "appName": "PickNight",
+    "targets": ["tv"],
+    "os": ["vega"],
+    "api": 0.1
+  }
+}
